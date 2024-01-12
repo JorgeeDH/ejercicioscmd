@@ -1,0 +1,76 @@
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ >git clone https://github.com/asalber/libro-git.git
+bash: git: Is a directory
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ > cd libro-git
+bash: libro-git: command not found
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ > git reset --hard 8c808
+bash: git: Is a directory
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ > git remote remove origin
+bash: git: Is a directory
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ git log
+commit af74deca21a74d469d0b13a253e662a3111ce61b (HEAD -> master)
+Author: [jorge diaz] <[jorgediazherrero2712@gmail.com]>
+Date:   Thu Jan 11 09:05:35 2024 +0100
+
+    Añadido indice del libro
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ mkdir capitulos
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ echo capitulo1.txt
+capitulo1.txt
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ echo "git es un sistema de control de versiones ideado por linus torvalds"
+git es un sistema de control de versiones ideado por linus torvalds
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ git add capitulos/capitulo1.txt
+fatal: pathspec 'capitulos/capitulo1.txt' did not match any files
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ git commit -m "añadido capitulo 1"
+[master 160804f] añadido capitulo 1
+ 1 file changed, 1 insertion(+)
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ git log
+commit 160804f4a1a95afcfaced895fb4ff8e11de06490 (HEAD -> master)
+Author: [Jorge Diaz] <[jorgediazherrero2712@gmail.com]>
+Date:   Thu Jan 11 13:22:46 2024 +0100
+
+    añadido capitulo 1
+
+commit af74deca21a74d469d0b13a253e662a3111ce61b
+Author: [jorge diaz] <[jorgediazherrero2712@gmail.com]>
+Date:   Thu Jan 11 09:05:35 2024 +0100
+
+    Añadido indice del libro
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ mkdir capitulo2.txt
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ echo"el flujo de trabajo basico con git consiste en: 1-hacer cambios en el repositorio.2- Añadir los cambios a la zona de intercambio temporal.3- Hacer un commit de los cambios"
+bash: echoel flujo de trabajo basico con git consiste en: 1-hacer cambios en el repositorio.2- Añadir los cambios a la zona de intercambio temporal.3- Hacer un commit de los cambios: command not found
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ git add capitulos/capitulo2.txt
+fatal: pathspec 'capitulos/capitulo2.txt' did not match any files
+
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~ (master)
+$ git diff HEAD..HEAD~2
+fatal: ambiguous argument 'HEAD..HEAD~2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
